@@ -1,0 +1,7 @@
+<p>
+  <strong
+    >Comments by:
+    {{ comments.author?.firstName + " " + comments.author?.lastName }}
+  </strong>
+  {{ comments.body.slice(0, 30) + "..." }}
+</p>

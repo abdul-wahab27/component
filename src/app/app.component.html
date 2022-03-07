@@ -1,0 +1,17 @@
+<h1>{{ heading }}</h1>
+
+<div *ngFor="let singlePost of data">
+  <app-posts [post]="singlePost"></app-posts>
+
+  <ul>
+    <li *ngFor="let comment of singlePost.comments">
+      <app-posts-comments [comments]="comment"></app-posts-comments>
+    </li>
+  </ul>
+</div>
+
+<ul>
+  <li *ngFor="let item of data">
+    <app-new [new]="item"></app-new>
+  </li>
+</ul>
